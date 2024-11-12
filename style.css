@@ -1,0 +1,91 @@
+/* https://www.w3schools.com/cssref/pr_background-image.asp */
+body {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  margin: 0;
+  background-image: url("images/pokemon_stadium.png"); /* The image used */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+/* classes that specify div shape */
+.row {
+  display: flex;
+  height: 50%;
+  width: 100%;
+}
+.box {
+  height: 100%;
+  width: 50%;
+}
+
+/* contain your images inside their parent divs */
+img {
+  max-height: 75%;
+  max-width: 75%;
+}
+/* use 'calc' if you have a repeating decimal like 33.3333333333333333% */
+/* https://www.w3schools.com/cssref/func_calc.asp */
+.smaller-img {
+  max-height: calc(100% / 3);
+  max-width: calc(100% / 3);
+}
+/* classes used to center images (or place images in top/bottom or left/right */
+/* justify-content == vertical; align-items == horizontal */
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.top-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+}
+.top-right {
+  justify-content: flex-end;
+  align-items: flex-start;
+  display: flex;
+}
+.bottom-left {
+  justify-content: flex-start;
+  align-items: flex-end;
+  display: flex;
+}
+.bottom-right {
+  justify-content: flex-end;
+  align-items: flex-end;
+  display: flex;
+}
+
+/* to get an image to flot infront of everything, use 'position' */
+/* https://www.w3schools.com/cssref/pr_class_position.asp */
+.floating {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* set an image in the CSS if it changes at a breakpoint */
+.changing-image {
+  content: url("images/eevee.png");
+}
+/* in the desktop layout this class is empty, but it changes once you hit the breakpoint */
+.disappear {
+}
+
+@media only screen and (max-width: 800px) {
+  .changing-image {
+    content: url("images/leafeon.png");
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .disappear {
+    display: none;
+  }
+}

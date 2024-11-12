@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- link the CSS file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- show a name on the tab -->
+    <title>Pokemon Toolkit!</title>
+    <!-- add a little image on the tab -->
+    <!-- https://favicon.io/favicon-converter/ -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body>
+    <!-- children of the body element -->
+    <div class="row">
+      <div class="box top-left">
+        <img src="images/flareon.png" class="disappear" />
+      </div>
+      <div class="box top-right">
+        <img src="images/vaporeon.png" class="disappear" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="box bottom-left">
+        <img src="images/jolteon.png" />
+      </div>
+      <div class="box bottom-right">
+        <img class="changing-image" />
+      </div>
+    </div>
+
+    <!-- this image is not part of the DOM, it is placed using 'position' -->
+    <img src="images/pokeball.webp" class="floating smaller-img" />
+  </body>
+</html>
